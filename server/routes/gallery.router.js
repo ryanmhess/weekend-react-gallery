@@ -21,20 +21,21 @@ router.get('/', (req, res) => {
 }); // END GET Route
 
 // PUT Route
-// router.put('/like/:id', (req, res) => {
-//     console.log('Im in gallery.router PUT route.');
-//     console.log(req.params);
-//     const galleryId = req.params.id;
-//     for(const galleryItem of galleryItems) {
-//         if(galleryItem.id == galleryId) {
-//             galleryItem.likes += 1;
-//         }
-//     }
-//     res.sendStatus(200);
-// }); // END PUT Route
-
-//  DELETE
-
-//  UPDATE
+router.put('/:id', (req, res) => {
+    console.log('Im in gallery.router PUT route.');
+    const sqlText = `
+        UPDATE gallery
+            SET smiles = smiles + 1
+            WHERE id = $1
+    `
+    const sqlValues = [req.params.id]
+    pool.query(sqlText, sqlValues)
+        .then((dbPutRes) => {
+            res.sendStatus(200);
+        }).catch((dbPutErr) => {
+            console.log('Database PUT error:', dbPutErr);
+        })
+    
+}); // END PUT Route
 
 module.exports = router;

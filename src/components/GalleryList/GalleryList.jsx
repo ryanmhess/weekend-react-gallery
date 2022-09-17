@@ -1,6 +1,6 @@
 import GalleryItem from '../GalleryItem/GalleryItem.jsx'
 
-function PhotoGallery({ photos, setPhotos }) {
+function GalleryList({ getGallery, photos }) {
     return(
         <main className="gallery">
             {photos.map(photo => {
@@ -8,7 +8,7 @@ function PhotoGallery({ photos, setPhotos }) {
                     <GalleryItem 
                         key={photo.id} 
                         photo={photo} 
-                        setPhotos={setPhotos} 
+                        getGallery={getGallery} 
                     />
                 )
             })}
@@ -16,4 +16,4 @@ function PhotoGallery({ photos, setPhotos }) {
     )
 }
 
-export default PhotoGallery;
+export default GalleryList;

@@ -28,7 +28,7 @@ function App() {
         return (
         <div className="App">
             <Header />
-            <GalleryList setPhotos={setPhotos} photos={photos}/>
+            <GalleryList getGallery={getGallery} photos={photos}/>
 
             <p>Gallery goes here</p>
             <img src="images/goat_small.jpg"/>

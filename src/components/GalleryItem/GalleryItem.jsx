@@ -1,12 +1,25 @@
+import axios from "axios";
 
-function PhotoBox({ photo, setPhotos }) {
+function GalleryItem({ getGallery, photo }) {
+
+    const addSmiles = () => {
+        axios({
+            method: 'PUT',
+            url: `/gallery/${photo.id}`
+        }).then((putRes) => {
+            getGallery();
+        }).catch((putErr) => {
+            console.log('PUT Route error:', putErr);
+        })
+    }
+
     return(
         <section className="photo">
             <img src={photo.path}/>
-            <button>Add a smile! 😊</button>
-            {photo.smiles === 0 ? <p>This makes me smile!</p> : <p>This makes {photo.smiles} people smile!</p>}
+            <button onClick={addSmiles}>Add a smile! 😊</button>
+            {photo.smiles === 1 ? <p>This makes me smile!</p> : <p>This brought a smile to {photo.smiles} people!</p>}
         </section>
     )
 }
 
-export default PhotoBox;
+export default GalleryItem;
