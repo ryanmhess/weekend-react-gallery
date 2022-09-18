@@ -3,7 +3,7 @@ import axios from 'axios';
 
 function GalleryItem({ getGallery, photo }) {
 
-    const addSmiles = () => {
+    const addHuzzah = () => {
         axios({
             method: 'PUT',
             url: `/gallery/${photo.id}`
@@ -23,14 +23,14 @@ function GalleryItem({ getGallery, photo }) {
     return(
         <section className="photoBox">
             <div onClick={clickTrigger} className="photo">
-                {photoTrigger ? <img  className="photoImg" src={photo.path}/> : 
+                {photoTrigger ? <img  className="photoImg" src={photo.path} title="Click me!"/> : 
                 <>
                     <img  className="photoImg" src={photo.path}/>
                     <p className="tag">{photo.description}</p>
                 </>}
             </div>
-            <button onClick={addSmiles}>smile</button>
-            {photo.smiles === 1 ? <p>This makes me smile!</p> : <p>This brought a smile to {photo.smiles} faces!</p>}
+            <button onClick={addHuzzah}>Huzzah!</button>
+            {photo.huzzahs === 1 ? <p>Celebrating:  {photo.huzzahs} Huzzah!</p> : <p>Celebrating:  {photo.huzzahs} Huzzahs!</p>}
         </section>
     )
 }

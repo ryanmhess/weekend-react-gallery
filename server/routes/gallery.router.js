@@ -25,7 +25,7 @@ router.put('/:id', (req, res) => {
     console.log('Im in gallery.router PUT route.');
     const sqlText = `
         UPDATE gallery
-            SET smiles = smiles + 1
+            SET huzzahs = huzzahs + 1
             WHERE id = $1
     `
     const sqlValues = [req.params.id]

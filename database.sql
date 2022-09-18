@@ -5,13 +5,12 @@ CREATE TABLE gallery (
     id SERIAL PRIMARY KEY,
     path VARCHAR(500) NOT NULL,
     description VARCHAR(500) NOT NULL,
-    smiles INTEGER DEFAULT 1,
-    trigger BOOLEAN DEFAULT false
+    huzzahs INTEGER DEFAULT 1
     );
 
     --Insert Initial Data
     INSERT INTO gallery
-    (path, description, smiles)
+    (path, description, huzzahs)
     VALUES
     ('images/WDA.jpeg', 'All in attendance at wedding.', 1),
     ('images/WDC001.jpeg', 'Ryan & Julia', 1),
