@@ -14,9 +14,9 @@ function GalleryItem({ getGallery, photo }) {
     }
 
     return(
-        <section className="photo">
-            <img src={photo.path}/>
-            <button onClick={addSmiles}>Add a smile! 😊</button>
+        <section className="photoBox">
+            <img className="photo" src={photo.path}/>
+            <button onClick={addSmiles}>smile</button>
             {photo.smiles === 1 ? <p>This makes me smile!</p> : <p>This brought a smile to {photo.smiles} people!</p>}
         </section>
     )

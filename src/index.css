@@ -3,3 +3,25 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-around;
+  gap: 20px 20px;
+}
+
+.photoBox{
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.photo{
+  width: 100px;
+  height: 100px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}

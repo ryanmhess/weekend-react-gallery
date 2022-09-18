@@ -29,9 +29,6 @@ function App() {
         <div className="App">
             <Header />
             <GalleryList getGallery={getGallery} photos={photos}/>
-
-            <p>Gallery goes here</p>
-            <img src="images/goat_small.jpg"/>
         </div>
     );
 }
