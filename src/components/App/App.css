@@ -46,6 +46,7 @@ h1 {
   width: 150px;
   height: 150px;
   overflow: hidden;
+  object-fit: cover;
   border: 1px solid transparent;
   border-radius: 10px;
   display: flex;
