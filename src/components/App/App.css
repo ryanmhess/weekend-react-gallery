@@ -88,6 +88,7 @@ button {
   color: rgb(64, 121, 140);
   border-style: outset;
   box-shadow: 0 0 10px rgb(11, 32, 39, .5);
+  font-family: fantasy;
 }
 
 button:hover {
