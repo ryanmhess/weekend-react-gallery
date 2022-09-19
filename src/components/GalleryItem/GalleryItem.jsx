@@ -30,7 +30,7 @@ function GalleryItem({ getGallery, photo }) {
                 </>}
             </div>
             <button onClick={addHuzzah}>Huzzah!</button>
-            {photo.huzzahs === 1 ? <p>Celebrating:  {photo.huzzahs} Huzzah!</p> : <p>Celebrating:  {photo.huzzahs} Huzzahs!</p>}
+            {photo.huzzahs === 1 ? <p>Celebrating {photo.huzzahs} Huzzah!</p> : <p>Celebrating {photo.huzzahs} Huzzahs!</p>}
         </section>
     )
 }
